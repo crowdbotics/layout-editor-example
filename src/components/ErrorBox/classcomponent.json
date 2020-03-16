@@ -1,0 +1,47 @@
+{
+  "imports": {
+    "react": ["React", "Component"],
+    "react-redux": ["connect"],
+    "react-native-ui-kitten": ["Text", "Layout", "Button"],
+    "react-native-google-signin": ["GoogleSignin", "GoogleSigninButton"],
+    "./styles": ["styles"],
+    "../../redux/actions": ["calendarActions"],
+    "../../../../components/ErrorBox": ["ErrorBox"]
+  },
+  "class": { "name": "CalendarLogin", "superclass": "Component" },
+  "methods": {
+    "renderUser": {
+      "type": "JSXElement",
+      "value": "Layout",
+      "attrs": [{ "name": "style", "type": "expression", "value": "styles.signInContainer" }],
+      "children": [
+        {
+          "type": "JSXElement",
+          "value": "Text",
+          "attrs": [{ "name": "style", "type": "expression", "value": "styles.textRow" }],
+          "children": [{ "type": "JSXText", "value": "SignIn with your Google account" }]
+        },
+        {
+          "type": "JSXElement",
+          "value": "GoogleSigninButton",
+          "attrs": [
+            { "name": "style", "type": "expression", "value": "styles.loginButton" },
+            { "name": "color", "type": "expression", "value": "GoogleSigninButton.Color.Light" },
+            { "name": "size", "type": "expression", "value": "GoogleSigninButton.Size.Wide" },
+            { "name": "onPress", "type": "expression", "value": "actions.googleSignIn" },
+            { "name": "disabled", "type": "expression", "value": "this.state.isSigninInProgress" }
+          ]
+        }
+      ]
+    },
+    "render": {
+      "type": "JSXElement",
+      "value": "Layout",
+      "attrs": [{ "name": "style", "type": "expression", "value": "styles.screen" }],
+      "children": [
+        { "type": "CallExpression", "value": "this.renderUser" },
+        { "type": "CallExpression", "value": "this.renderErrors" }
+      ]
+    }
+  }
+}
