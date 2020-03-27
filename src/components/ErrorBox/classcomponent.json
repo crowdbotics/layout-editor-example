@@ -1,12 +1,63 @@
 {
   "imports": {
-    "react": ["React", "Component"],
-    "react-redux": ["connect"],
-    "react-native-ui-kitten": ["Text", "Layout", "Button"],
-    "react-native-google-signin": ["GoogleSignin", "GoogleSigninButton"],
-    "./styles": ["styles"],
-    "../../redux/actions": ["calendarActions"],
-    "../../../../components/ErrorBox": ["ErrorBox"]
+    "react": [
+      {
+        "type": "ImportDefaultSpecifier",
+        "name": "React"
+      },
+      {
+        "type": "ImportSpecifier",
+        "name": "Component"
+      }
+    ],
+    "react-redux": [
+      {
+        "type": "ImportSpecifier",
+        "name": "connect"
+      }
+    ],
+    "react-native-ui-kitten": [
+      {
+        "name": "Text",
+        "type": "ImportSpecifier"
+      },
+      {
+        "name": "Layout",
+        "type": "ImportSpecifier"
+      },
+      {
+        "name": "Button",
+        "type": "ImportSpecifier"
+      }
+    ],
+    "react-native-google-signin": [
+      {
+        "name": "GoogleSignin",
+        "type": "ImportSpecifier"
+      },
+      {
+        "name": "GoogleSigninButton",
+        "type": "ImportSpecifier"
+      }
+    ],
+    "./styles": [
+      {
+        "type": "ImportSpecifier",
+        "name": "styles"
+      }
+    ],
+    "../../redux/actions": [
+      {
+        "name": "calendarActions",
+        "type": "ImportNamespaceSpecifier"
+      }
+    ],
+    "../../../../components/ErrorBox": [
+      {
+        "name": "ErrorBox",
+        "type": "ImportDefaultSpecifier"
+      }
+    ]
   },
   "class": { "name": "CalendarLogin", "superclass": "Component" },
   "methods": {

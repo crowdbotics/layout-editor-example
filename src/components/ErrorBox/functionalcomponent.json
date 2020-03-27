@@ -1,5 +1,28 @@
 {
-  "imports": { "react": ["React"], "react-native-ui-kitten": ["Text", "Layout"], "./styles": ["styles"] },
+  "imports": {
+    "react": [
+      {
+        "type": "ImportDefaultSpecifier",
+        "name": "React"
+      }
+    ],
+    "react-native-ui-kitten": [
+      {
+        "name": "Text",
+        "type": "ImportSpecifier"
+      },
+      {
+        "name": "Layout",
+        "type": "ImportSpecifier"
+      }
+    ],
+    "./styles": [
+      {
+        "type": "ImportSpecifier",
+        "name": "styles"
+      }
+    ]
+  },
   "function": { "ErrorBox": [["errorText"]] },
   "component": {
     "type": "JSXElement",
