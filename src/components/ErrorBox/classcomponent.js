@@ -57,13 +57,6 @@ class CalendarLogin extends Component {
           onPress={actions.googleSignIn}
           disabled={this.state.isSigninInProgress}
         />
-        <FacebookSigninButton
-          style={styles.loginButton}
-          color={GoogleSigninButton.Color.Light}
-          size={GoogleSigninButton.Size.Wide}
-          onPress={actions.googleSignIn}
-          disabled={this.state.isSigninInProgress}
-        />
       </Layout>
     )
   }
