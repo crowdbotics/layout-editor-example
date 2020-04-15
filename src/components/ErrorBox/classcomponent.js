@@ -48,25 +48,25 @@ class CalendarLogin extends Component {
     }
 
     return (
-      <CbFlex
-        title="Button123"
-        color="#FF8040"
-        styles={{ overflow: "visible" }}
-      >
-        <CbFlex styles={{ overflow: "visible" }} />
-      </CbFlex>
+      <Layout style={styles.signInContainer}>
+        <Text style={styles.textRow}>SignIn with your Google account</Text>
+        <GoogleSigninButton
+          style={styles.loginButton}
+          color={GoogleSigninButton.Color.Light}
+          size={GoogleSigninButton.Size.Wide}
+          onPress={actions.googleSignIn}
+          disabled={this.state.isSigninInProgress}
+        />
+      </Layout>
     )
   }
 
   render() {
     return (
-      <CbFlex
-        title="Button123"
-        color="#FF8040"
-        styles={{ overflow: "visible" }}
-      >
-        <CbFlex styles={{ overflow: "visible" }} />
-      </CbFlex>
+      <Layout style={styles.screen}>
+        {this.renderUser()}
+        {this.renderErrors()}
+      </Layout>
     )
   }
 }
