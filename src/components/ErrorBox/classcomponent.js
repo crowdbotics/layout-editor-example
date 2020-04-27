@@ -51,7 +51,7 @@ class CalendarLogin extends Component {
       <CbFlex
         title="Button123"
         color="#FF8040"
-        styles={{ overflow: "visible", color: "black" }}
+        styles={{ overflow: "visible" }}
       >
         <CbFlex styles={{ overflow: "visible" }} />
       </CbFlex>
@@ -63,7 +63,7 @@ class CalendarLogin extends Component {
       <CbFlex
         title="Button123"
         color="#FF8040"
-        styles={{ overflow: "visible", color: "black" }}
+        styles={{ overflow: "visible" }}
       >
         <CbFlex styles={{ overflow: "visible" }} />
       </CbFlex>
