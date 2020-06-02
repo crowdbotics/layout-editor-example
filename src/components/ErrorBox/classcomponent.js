@@ -48,24 +48,16 @@ class CalendarLogin extends Component {
     }
 
     return (
-      <CbFlex
-        title="Button123"
-        color="#FF8040"
-        styles={{ overflow: "visible" }}
-      >
-        <CbFlex styles={{ overflow: "visible" }} />
+      <CbFlex title="Button123" color="#FF8040" style={{ overflow: "visible" }}>
+        <CbFlex readOnly={false} style={{ overflow: "visible" }} />
       </CbFlex>
     )
   }
 
   render() {
     return (
-      <CbFlex
-        title="Button123"
-        color="#FF8040"
-        styles={{ overflow: "visible" }}
-      >
-        <CbFlex styles={{ overflow: "visible" }} />
+      <CbFlex title="Button123" color="#FF8040" style={{ overflow: "visible" }}>
+        <CbFlex readOnly={false} style={{ overflow: "visible" }} />
       </CbFlex>
     )
   }
