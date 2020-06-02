@@ -15,12 +15,8 @@ export class _Blank extends React.Component {
   state = {}
 
   render = () => (
-    <CbFlex
-      title="Button12345"
-      color="#FF8040"
-      styles={{ overflow: "visible" }}
-    >
-      <CbFlex styles={{ overflow: "visible" }} />
+    <CbFlex title="Button12345" color="#FF8040" style={{ overflow: "visible" }}>
+      <CbFlex style={{ overflow: "visible" }} />
     </CbFlex>
   )
 }
