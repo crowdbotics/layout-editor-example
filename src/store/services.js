@@ -1,5 +1,5 @@
 const apiClient = axios.create({
-  baseURL: "ok",
+  baseURL: "https://petstore.swagger.io/v2",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
