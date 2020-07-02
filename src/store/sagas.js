@@ -1,5 +1,5 @@
 export default function* rootSaga() {
-  const sagas = [[]]
+  const sagas = []
   yield all(
     sagas.map(saga =>
       spawn(function*() {
