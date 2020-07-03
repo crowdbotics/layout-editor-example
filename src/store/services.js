@@ -3,19 +3,24 @@ import {
   TESTEPERMISSIONS_API_USERNAME,
   TESTEPERMISSIONS_API_PASSWORD
 } from "react-native-dotenv"
+import {
+  PET_STORE_API_KEY,
+  TESTEPERMISSIONS_API_USERNAME,
+  TESTEPERMISSIONS_API_PASSWORD
+} from "react-native-dotenv"
 const swaggerPetstore = axios.create({
   baseURL: "https://petstore.swagger.io/v2",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    api_key: process.env.PET_STORE_API_KEY
+    api_key: PET_STORE_API_KEY
   }
 })
 const testePermissionsAPI = axios.create({
   baseURL: "https://testepermissions_15043.herokuapp.com/",
   auth: {
-    username: process.env.TESTEPERMISSIONS_API_USERNAME,
-    password: process.env.TESTEPERMISSIONS_API_PASSWORD
+    username: TESTEPERMISSIONS_API_USERNAME,
+    password: TESTEPERMISSIONS_API_PASSWORD
   },
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
