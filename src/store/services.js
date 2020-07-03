@@ -9,11 +9,7 @@ const swaggerPetstore = axios.create({
 })
 const testePermissionsAPI = axios.create({
   baseURL: "https://testepermissions_15043.herokuapp.com/",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-    api_key: process.env.SERVICE_API_KEY
-  }
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function updatePet(requestBody) {
   return swaggerPetstore.put(`/pet`, requestBody)
