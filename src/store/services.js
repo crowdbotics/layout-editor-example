@@ -4,7 +4,7 @@ const swaggerPetstore = axios.create({
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    api_key: process.env.P
+    api_key: process.env.PET_STORE_API_KEY
   }
 })
 const testePermissionsAPI = axios.create({
