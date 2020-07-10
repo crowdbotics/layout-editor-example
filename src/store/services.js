@@ -1,9 +1,5 @@
 import axios from "axios"
-import {
-  PET_STORE_API_KEY,
-  TESTEPERMISSIONS_API_USERNAME,
-  TESTEPERMISSIONS_API_PASSWORD
-} from "react-native-dotenv"
+import { undefined, undefined } from "react-native-dotenv"
 const swaggerPetstore = axios.create({
   baseURL: "https://petstore.swagger.io/v2",
   headers: {
