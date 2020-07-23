@@ -97,9 +97,9 @@ export default function apiReducer(state = initialState, action) {
     case types.REST_AUTH_LOGIN_CREATE:
     case types.REST_AUTH_LOGIN_CREATE_SUCCEEDED:
     case types.REST_AUTH_LOGIN_CREATE_FAILED:
-    case types.REST_AUTH_LOGOUT_LIST:
-    case types.REST_AUTH_LOGOUT_LIST_SUCCEEDED:
-    case types.REST_AUTH_LOGOUT_LIST_FAILED:
+    case types.REST__AUTH_LOGOUT_LIST:
+    case types.REST__AUTH_LOGOUT_LIST_SUCCEEDED:
+    case types.REST__AUTH_LOGOUT_LIST_FAILED:
     case types.REST_AUTH_LOGOUT_CREATE:
     case types.REST_AUTH_LOGOUT_CREATE_SUCCEEDED:
     case types.REST_AUTH_LOGOUT_CREATE_FAILED:
