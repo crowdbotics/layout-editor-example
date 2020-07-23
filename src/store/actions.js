@@ -511,13 +511,16 @@ export const rest_auth_user_partial_updateFailed = error => ({
   type: types.REST_AUTH_USER_PARTIAL_UPDATE_FAILED,
   error
 })
+
 export const rest_auth_logout_list = () => ({
   type: types.REST_AUTH_LOGOUT_LIST
 })
+
 export const rest_auth_logout_listSucceeded = response => ({
   type: types.REST_AUTH_LOGOUT_LIST_SUCCEEDED,
   response
 })
+
 export const rest_auth_logout_listFailed = error => ({
   type: types.REST_AUTH_LOGOUT_LIST_FAILED,
   error
