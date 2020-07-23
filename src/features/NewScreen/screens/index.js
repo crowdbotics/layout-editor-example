@@ -9,6 +9,7 @@ import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin"
 import { styles } from "./styles"
 import * as calendarActions from "../../redux/actions"
 import ErrorBox from "../../../../components/ErrorBox"
+
 export class _New extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
