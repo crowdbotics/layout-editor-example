@@ -117,7 +117,7 @@ function api_v1_signup_create(requestBody) {
 function rest_auth_login_create(requestBody) {
   return testePermissionsAPI.post(`/rest-auth/login/`, requestBody)
 }
-function rest__auth_logout_list() {
+function rest_auth_logout_list() {
   return testePermissionsAPI.get(`/rest-auth/logout/`)
 }
 function rest_auth_logout_create() {
@@ -185,7 +185,7 @@ export const apiService = {
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
-  rest__auth_logout_list,
+  rest_auth_logout_list,
   rest_auth_logout_create,
   rest_auth_password_change_create,
   rest_auth_password_reset_create,

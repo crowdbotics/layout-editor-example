@@ -360,16 +360,16 @@ function* rest_auth_login_createWorker(action) {
 function* rest_auth_login_createWatcher() {
   yield takeEvery(types.REST_AUTH_LOGIN_CREATE, rest_auth_login_createWorker)
 }
-function* rest__auth_logout_listWorker(action) {
+function* rest_auth_logout_listWorker(action) {
   try {
-    const result = yield call(apiService.rest__auth_logout_list, action)
-    yield put(actions.rest__auth_logout_listSucceeded(result))
+    const result = yield call(apiService.rest_auth_logout_list, action)
+    yield put(actions.rest_auth_logout_listSucceeded(result))
   } catch (err) {
-    yield put(actions.rest__auth_logout_listFailed(err))
+    yield put(actions.rest_auth_logout_listFailed(err))
   }
 }
-function* rest__auth_logout_listWatcher() {
-  yield takeEvery(types.REST__AUTH_LOGOUT_LIST, rest__auth_logout_listWorker)
+function* rest_auth_logout_listWatcher() {
+  yield takeEvery(types.REST_AUTH_LOGOUT_LIST, rest_auth_logout_listWorker)
 }
 function* rest_auth_logout_createWorker(action) {
   try {
@@ -535,7 +535,7 @@ export default function* rootSaga() {
     api_v1_login_createWatcher,
     api_v1_signup_createWatcher,
     rest_auth_login_createWatcher,
-    rest__auth_logout_listWatcher,
+    rest_auth_logout_listWatcher,
     rest_auth_logout_createWatcher,
     rest_auth_password_change_createWatcher,
     rest_auth_password_reset_createWatcher,
