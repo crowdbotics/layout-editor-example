@@ -16,14 +16,19 @@ export class _New extends React.Component {
   }
   state = {}
   render = () => (
-    <CbFlex title="Button12345" color="#FF8040" style={{ overflow: "visible" }}>
-      <CbFlex style={{ overflow: "visible" }} />
+    <CbFlex
+      title="Button12345"
+      color="#FF8040"
+      style={this.props.themedStyle.CbFlex_undefined}
+    >
+      <CbFlex style={this.props.themedStyle.CbFlex_undefined} />
     </CbFlex>
   )
 }
 
 New = withStyles(_New, theme => ({
-  container: { backgroundColor: theme["color-basic-100"] }
+  CbFlex_undefined: { overflow: "visible" },
+  CbFlex_undefined: { overflow: "visible" }
 }))
 
 function mapStateToProps(state) {
