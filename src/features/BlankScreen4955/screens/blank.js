@@ -1,16 +1,6 @@
-import React from "react"
+import React, { Component } from "react"
 import { View } from "react-native"
-import {
-  withStyles,
-  Text,
-  Button,
-  CheckBox,
-  Radio,
-  Toggle,
-  Icon,
-  Input
-} from "react-native-ui-kitten"
-
+import { Text, Layout, Button } from "react-native-ui-kitten"
 import { connect } from "react-redux"
 import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin"
 import { styles } from "./styles"
@@ -25,30 +15,17 @@ export class _Blank extends React.Component {
   state = {}
 
   render = () => (
-    <View
-      style={{
-        overflow: "visible",
-        flexDirection: "column",
-        flexWrap: "wrap",
-        justifyContent: "flex-start",
-        alignItems: "stretch",
-        alignContent: "stretch",
-        borderStyle: "solid",
-        backgroundSize: "auto"
-      }}
+    <CbFlex
+      title="Button12345"
+      color="#FF8040"
+      style={this.props.themedStyle.CbFlex_undefined}
     >
-      <Button
-        style={{ overflow: "visible", borderStyle: "solid" }}
-        onPress={() => alert("Pressed!")}
-      >
-        Buttonoksomething
-      </Button>
-    </View>
+      <CbFlex style={this.props.themedStyle.CbFlex_undefined} />
+    </CbFlex>
   )
 }
 
 export default Blank = withStyles(_Blank, theme => ({
-  container: {
-    backgroundColor: theme["color-basic-100"]
-  }
+  CbFlex_undefined: { overflow: "visible" },
+  CbFlex_undefined: { overflow: "visible" }
 }))
