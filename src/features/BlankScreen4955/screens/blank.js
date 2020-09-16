@@ -15,23 +15,14 @@ export class _Blank extends React.Component {
   state = {}
 
   render = () => (
-    <CbFlex title="Button12345" color="#FF8040" style={{ overflow: "visible" }}>
-      <CbFlex style={{ overflow: "visible" }} />
+    <CbFlex
+      title="Button12345"
+      color="#FF8040"
+      style={this.props.themedStyle.CbFlex_undefined}
+    >
+      <CbFlex style={this.props.themedStyle.CbFlex_undefined} />
     </CbFlex>
   )
 }
 
-export default Blank = withStyles(_Blank, theme => ({
-  View_1: {
-    overflow: "visible",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderStyle: "solid",
-    backgroundSize: "auto"
-  },
-
-  Button_4: { overflow: "visible", borderStyle: "solid" }
-}))
+export default Blank = withStyles(_Blank, theme => ({}))
