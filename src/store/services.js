@@ -35,16 +35,16 @@ function findPetsByTags({ tags }) {
   return swaggerPetstore.get(`/pet/findByTags`, { params: { tags: tags } })
 }
 function getPetById(petId) {
-  return swaggerPetstore.get(`/pet/{petId}`)
+  return swaggerPetstore.get(`/pet/${petId}`)
 }
 function updatePetWithForm(petId, requestBody) {
-  return swaggerPetstore.post(`/pet/{petId}`, requestBody)
+  return swaggerPetstore.post(`/pet/${petId}`, requestBody)
 }
 function deletePet(petId) {
-  return swaggerPetstore.delete(`/pet/{petId}`)
+  return swaggerPetstore.delete(`/pet/${petId}`)
 }
 function uploadFile(petId, requestBody) {
-  return swaggerPetstore.post(`/pet/{petId}/uploadImage`, requestBody)
+  return swaggerPetstore.post(`/pet/${petId}/uploadImage`, requestBody)
 }
 function getInventory() {
   return swaggerPetstore.get(`/store/inventory`)
@@ -53,10 +53,10 @@ function placeOrder(requestBody) {
   return swaggerPetstore.post(`/store/order`, requestBody)
 }
 function getOrderById(orderId) {
-  return swaggerPetstore.get(`/store/order/{orderId}`)
+  return swaggerPetstore.get(`/store/order/${orderId}`)
 }
 function deleteOrder(orderId) {
-  return swaggerPetstore.delete(`/store/order/{orderId}`)
+  return swaggerPetstore.delete(`/store/order/${orderId}`)
 }
 function createUser(requestBody) {
   return swaggerPetstore.post(`/user`, requestBody)
@@ -76,37 +76,37 @@ function logoutUser() {
   return swaggerPetstore.get(`/user/logout`)
 }
 function getUserByName(username) {
-  return swaggerPetstore.get(`/user/{username}`)
+  return swaggerPetstore.get(`/user/${username}`)
 }
 function updateUser(username, requestBody) {
-  return swaggerPetstore.put(`/user/{username}`, requestBody)
+  return swaggerPetstore.put(`/user/${username}`, requestBody)
 }
 function deleteUser(username) {
-  return swaggerPetstore.delete(`/user/{username}`)
+  return swaggerPetstore.delete(`/user/${username}`)
 }
 function api_v1_customtext_list() {
   return testePermissionsAPI.get(`/api/v1/customtext/`)
 }
 function api_v1_customtext_read() {
-  return testePermissionsAPI.get(`/api/v1/customtext/{id}/`)
+  return testePermissionsAPI.get(`/api/v1/customtext/${id}/`)
 }
 function api_v1_customtext_update(requestBody) {
-  return testePermissionsAPI.put(`/api/v1/customtext/{id}/`, requestBody)
+  return testePermissionsAPI.put(`/api/v1/customtext/${id}/`, requestBody)
 }
 function api_v1_customtext_partial_update(requestBody) {
-  return testePermissionsAPI.patch(`/api/v1/customtext/{id}/`, requestBody)
+  return testePermissionsAPI.patch(`/api/v1/customtext/${id}/`, requestBody)
 }
 function api_v1_homepage_list() {
   return testePermissionsAPI.get(`/api/v1/homepage/`)
 }
 function api_v1_homepage_read() {
-  return testePermissionsAPI.get(`/api/v1/homepage/{id}/`)
+  return testePermissionsAPI.get(`/api/v1/homepage/${id}/`)
 }
 function api_v1_homepage_update(requestBody) {
-  return testePermissionsAPI.put(`/api/v1/homepage/{id}/`, requestBody)
+  return testePermissionsAPI.put(`/api/v1/homepage/${id}/`, requestBody)
 }
 function api_v1_homepage_partial_update(requestBody) {
-  return testePermissionsAPI.patch(`/api/v1/homepage/{id}/`, requestBody)
+  return testePermissionsAPI.patch(`/api/v1/homepage/${id}/`, requestBody)
 }
 function api_v1_login_create() {
   return testePermissionsAPI.post(`/api/v1/login/`)
