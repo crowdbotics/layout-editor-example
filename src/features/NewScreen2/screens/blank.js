@@ -1,16 +1,21 @@
 import React, { Component } from "react"
-import { View, Image, ImageBackground } from "react-native"
-import { Text, Layout, Button } from "react-native-ui-kitten"
-
-import Slider from "@react-native-community/slider"
+import {
+  View,
+  Image,
+  ImageBackground,
+  Text,
+  Button,
+  StyleSheet
+} from "react-native"
 import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 import { connect } from "react-redux"
+import { Text, Layout, Button } from "react-native-ui-kitten"
 import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin"
 import { styles } from "./styles"
 import * as calendarActions from "../../redux/actions"
 import ErrorBox from "../../../../components/ErrorBox"
 
-export class _New extends React.Component {
+class _New extends Component {
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
@@ -26,10 +31,9 @@ export class _New extends React.Component {
   )
 }
 
-New = withStyles(_New, theme => ({}))
-
+const styles = StyleSheet.create({})
 function mapStateToProps(state) {
-  return { state: state }
+  return { state: state.apiReducer }
 }
-const actionCreators = {}
-export default connect(mapStateToProps, actionCreators)(New)
+const mapDispatchToProps = {}
+export default connect(mapStateToProps, mapDispatchToProps)(New)
