@@ -16,15 +16,17 @@ export class _New extends React.Component {
   }
   state = {}
   render = () => (
-    <CbFlex title="Button12345" color="#FF8040" style={styles.CbFlex_undefined}>
-      <CbFlex style={styles.CbFlex_undefined} />
+    <CbFlex
+      title="Button12345"
+      color="#FF8040"
+      style={this.props.themedStyle.CbFlex_undefined}
+    >
+      <CbFlex style={this.props.themedStyle.CbFlex_undefined} />
     </CbFlex>
   )
 }
 
-New = withStyles(_New, theme => ({
-  container: { backgroundColor: theme["color-basic-100"] }
-}))
+New = withStyles(_New, theme => ({}))
 
 function mapStateToProps(state) {
   return { state: state.apiReducer }
