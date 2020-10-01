@@ -1,9 +1,9 @@
 function* updatePetWorker(action) {
   try {
     const result = yield call(apiService.updatePet, action)
-    yield put(actions.updatePetSucceeded(result, action))
+    yield put(actions.updatePetSucceeded(result))
   } catch (err) {
-    yield put(actions.updatePetFailed(err, action))
+    yield put(actions.updatePetFailed(err))
   }
 }
 function* updatePetWatcher() {
@@ -12,9 +12,9 @@ function* updatePetWatcher() {
 function* addPetWorker(action) {
   try {
     const result = yield call(apiService.addPet, action)
-    yield put(actions.addPetSucceeded(result, action))
+    yield put(actions.addPetSucceeded(result))
   } catch (err) {
-    yield put(actions.addPetFailed(err, action))
+    yield put(actions.addPetFailed(err))
   }
 }
 function* addPetWatcher() {
@@ -23,9 +23,9 @@ function* addPetWatcher() {
 function* findPetsByStatusWorker(action) {
   try {
     const result = yield call(apiService.findPetsByStatus, action)
-    yield put(actions.findPetsByStatusSucceeded(result, action))
+    yield put(actions.findPetsByStatusSucceeded(result))
   } catch (err) {
-    yield put(actions.findPetsByStatusFailed(err, action))
+    yield put(actions.findPetsByStatusFailed(err))
   }
 }
 function* findPetsByStatusWatcher() {
@@ -34,9 +34,9 @@ function* findPetsByStatusWatcher() {
 function* findPetsByTagsWorker(action) {
   try {
     const result = yield call(apiService.findPetsByTags, action)
-    yield put(actions.findPetsByTagsSucceeded(result, action))
+    yield put(actions.findPetsByTagsSucceeded(result))
   } catch (err) {
-    yield put(actions.findPetsByTagsFailed(err, action))
+    yield put(actions.findPetsByTagsFailed(err))
   }
 }
 function* findPetsByTagsWatcher() {
@@ -45,9 +45,9 @@ function* findPetsByTagsWatcher() {
 function* getPetByIdWorker(action) {
   try {
     const result = yield call(apiService.getPetById, action)
-    yield put(actions.getPetByIdSucceeded(result, action))
+    yield put(actions.getPetByIdSucceeded(result))
   } catch (err) {
-    yield put(actions.getPetByIdFailed(err, action))
+    yield put(actions.getPetByIdFailed(err))
   }
 }
 function* getPetByIdWatcher() {
@@ -56,9 +56,9 @@ function* getPetByIdWatcher() {
 function* updatePetWithFormWorker(action) {
   try {
     const result = yield call(apiService.updatePetWithForm, action)
-    yield put(actions.updatePetWithFormSucceeded(result, action))
+    yield put(actions.updatePetWithFormSucceeded(result))
   } catch (err) {
-    yield put(actions.updatePetWithFormFailed(err, action))
+    yield put(actions.updatePetWithFormFailed(err))
   }
 }
 function* updatePetWithFormWatcher() {
@@ -67,9 +67,9 @@ function* updatePetWithFormWatcher() {
 function* deletePetWorker(action) {
   try {
     const result = yield call(apiService.deletePet, action)
-    yield put(actions.deletePetSucceeded(result, action))
+    yield put(actions.deletePetSucceeded(result))
   } catch (err) {
-    yield put(actions.deletePetFailed(err, action))
+    yield put(actions.deletePetFailed(err))
   }
 }
 function* deletePetWatcher() {
@@ -78,9 +78,9 @@ function* deletePetWatcher() {
 function* uploadFileWorker(action) {
   try {
     const result = yield call(apiService.uploadFile, action)
-    yield put(actions.uploadFileSucceeded(result, action))
+    yield put(actions.uploadFileSucceeded(result))
   } catch (err) {
-    yield put(actions.uploadFileFailed(err, action))
+    yield put(actions.uploadFileFailed(err))
   }
 }
 function* uploadFileWatcher() {
@@ -89,9 +89,9 @@ function* uploadFileWatcher() {
 function* getInventoryWorker(action) {
   try {
     const result = yield call(apiService.getInventory, action)
-    yield put(actions.getInventorySucceeded(result, action))
+    yield put(actions.getInventorySucceeded(result))
   } catch (err) {
-    yield put(actions.getInventoryFailed(err, action))
+    yield put(actions.getInventoryFailed(err))
   }
 }
 function* getInventoryWatcher() {
@@ -100,9 +100,9 @@ function* getInventoryWatcher() {
 function* placeOrderWorker(action) {
   try {
     const result = yield call(apiService.placeOrder, action)
-    yield put(actions.placeOrderSucceeded(result, action))
+    yield put(actions.placeOrderSucceeded(result))
   } catch (err) {
-    yield put(actions.placeOrderFailed(err, action))
+    yield put(actions.placeOrderFailed(err))
   }
 }
 function* placeOrderWatcher() {
@@ -111,9 +111,9 @@ function* placeOrderWatcher() {
 function* getOrderByIdWorker(action) {
   try {
     const result = yield call(apiService.getOrderById, action)
-    yield put(actions.getOrderByIdSucceeded(result, action))
+    yield put(actions.getOrderByIdSucceeded(result))
   } catch (err) {
-    yield put(actions.getOrderByIdFailed(err, action))
+    yield put(actions.getOrderByIdFailed(err))
   }
 }
 function* getOrderByIdWatcher() {
@@ -122,9 +122,9 @@ function* getOrderByIdWatcher() {
 function* deleteOrderWorker(action) {
   try {
     const result = yield call(apiService.deleteOrder, action)
-    yield put(actions.deleteOrderSucceeded(result, action))
+    yield put(actions.deleteOrderSucceeded(result))
   } catch (err) {
-    yield put(actions.deleteOrderFailed(err, action))
+    yield put(actions.deleteOrderFailed(err))
   }
 }
 function* deleteOrderWatcher() {
@@ -133,9 +133,9 @@ function* deleteOrderWatcher() {
 function* createUserWorker(action) {
   try {
     const result = yield call(apiService.createUser, action)
-    yield put(actions.createUserSucceeded(result, action))
+    yield put(actions.createUserSucceeded(result))
   } catch (err) {
-    yield put(actions.createUserFailed(err, action))
+    yield put(actions.createUserFailed(err))
   }
 }
 function* createUserWatcher() {
@@ -144,9 +144,9 @@ function* createUserWatcher() {
 function* createUsersWithArrayInputWorker(action) {
   try {
     const result = yield call(apiService.createUsersWithArrayInput, action)
-    yield put(actions.createUsersWithArrayInputSucceeded(result, action))
+    yield put(actions.createUsersWithArrayInputSucceeded(result))
   } catch (err) {
-    yield put(actions.createUsersWithArrayInputFailed(err, action))
+    yield put(actions.createUsersWithArrayInputFailed(err))
   }
 }
 function* createUsersWithArrayInputWatcher() {
@@ -158,9 +158,9 @@ function* createUsersWithArrayInputWatcher() {
 function* createUsersWithListInputWorker(action) {
   try {
     const result = yield call(apiService.createUsersWithListInput, action)
-    yield put(actions.createUsersWithListInputSucceeded(result, action))
+    yield put(actions.createUsersWithListInputSucceeded(result))
   } catch (err) {
-    yield put(actions.createUsersWithListInputFailed(err, action))
+    yield put(actions.createUsersWithListInputFailed(err))
   }
 }
 function* createUsersWithListInputWatcher() {
@@ -172,9 +172,9 @@ function* createUsersWithListInputWatcher() {
 function* loginUserWorker(action) {
   try {
     const result = yield call(apiService.loginUser, action)
-    yield put(actions.loginUserSucceeded(result, action))
+    yield put(actions.loginUserSucceeded(result))
   } catch (err) {
-    yield put(actions.loginUserFailed(err, action))
+    yield put(actions.loginUserFailed(err))
   }
 }
 function* loginUserWatcher() {
@@ -183,9 +183,9 @@ function* loginUserWatcher() {
 function* logoutUserWorker(action) {
   try {
     const result = yield call(apiService.logoutUser, action)
-    yield put(actions.logoutUserSucceeded(result, action))
+    yield put(actions.logoutUserSucceeded(result))
   } catch (err) {
-    yield put(actions.logoutUserFailed(err, action))
+    yield put(actions.logoutUserFailed(err))
   }
 }
 function* logoutUserWatcher() {
@@ -194,9 +194,9 @@ function* logoutUserWatcher() {
 function* getUserByNameWorker(action) {
   try {
     const result = yield call(apiService.getUserByName, action)
-    yield put(actions.getUserByNameSucceeded(result, action))
+    yield put(actions.getUserByNameSucceeded(result))
   } catch (err) {
-    yield put(actions.getUserByNameFailed(err, action))
+    yield put(actions.getUserByNameFailed(err))
   }
 }
 function* getUserByNameWatcher() {
@@ -205,9 +205,9 @@ function* getUserByNameWatcher() {
 function* updateUserWorker(action) {
   try {
     const result = yield call(apiService.updateUser, action)
-    yield put(actions.updateUserSucceeded(result, action))
+    yield put(actions.updateUserSucceeded(result))
   } catch (err) {
-    yield put(actions.updateUserFailed(err, action))
+    yield put(actions.updateUserFailed(err))
   }
 }
 function* updateUserWatcher() {
@@ -216,9 +216,9 @@ function* updateUserWatcher() {
 function* deleteUserWorker(action) {
   try {
     const result = yield call(apiService.deleteUser, action)
-    yield put(actions.deleteUserSucceeded(result, action))
+    yield put(actions.deleteUserSucceeded(result))
   } catch (err) {
-    yield put(actions.deleteUserFailed(err, action))
+    yield put(actions.deleteUserFailed(err))
   }
 }
 function* deleteUserWatcher() {
@@ -227,9 +227,9 @@ function* deleteUserWatcher() {
 function* api_v1_customtext_listWorker(action) {
   try {
     const result = yield call(apiService.api_v1_customtext_list, action)
-    yield put(actions.api_v1_customtext_listSucceeded(result, action))
+    yield put(actions.api_v1_customtext_listSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_customtext_listFailed(err, action))
+    yield put(actions.api_v1_customtext_listFailed(err))
   }
 }
 function* api_v1_customtext_listWatcher() {
@@ -238,9 +238,9 @@ function* api_v1_customtext_listWatcher() {
 function* api_v1_customtext_readWorker(action) {
   try {
     const result = yield call(apiService.api_v1_customtext_read, action)
-    yield put(actions.api_v1_customtext_readSucceeded(result, action))
+    yield put(actions.api_v1_customtext_readSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_customtext_readFailed(err, action))
+    yield put(actions.api_v1_customtext_readFailed(err))
   }
 }
 function* api_v1_customtext_readWatcher() {
@@ -249,9 +249,9 @@ function* api_v1_customtext_readWatcher() {
 function* api_v1_customtext_updateWorker(action) {
   try {
     const result = yield call(apiService.api_v1_customtext_update, action)
-    yield put(actions.api_v1_customtext_updateSucceeded(result, action))
+    yield put(actions.api_v1_customtext_updateSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_customtext_updateFailed(err, action))
+    yield put(actions.api_v1_customtext_updateFailed(err))
   }
 }
 function* api_v1_customtext_updateWatcher() {
@@ -266,9 +266,9 @@ function* api_v1_customtext_partial_updateWorker(action) {
       apiService.api_v1_customtext_partial_update,
       action
     )
-    yield put(actions.api_v1_customtext_partial_updateSucceeded(result, action))
+    yield put(actions.api_v1_customtext_partial_updateSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_customtext_partial_updateFailed(err, action))
+    yield put(actions.api_v1_customtext_partial_updateFailed(err))
   }
 }
 function* api_v1_customtext_partial_updateWatcher() {
@@ -280,9 +280,9 @@ function* api_v1_customtext_partial_updateWatcher() {
 function* api_v1_homepage_listWorker(action) {
   try {
     const result = yield call(apiService.api_v1_homepage_list, action)
-    yield put(actions.api_v1_homepage_listSucceeded(result, action))
+    yield put(actions.api_v1_homepage_listSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_homepage_listFailed(err, action))
+    yield put(actions.api_v1_homepage_listFailed(err))
   }
 }
 function* api_v1_homepage_listWatcher() {
@@ -291,9 +291,9 @@ function* api_v1_homepage_listWatcher() {
 function* api_v1_homepage_readWorker(action) {
   try {
     const result = yield call(apiService.api_v1_homepage_read, action)
-    yield put(actions.api_v1_homepage_readSucceeded(result, action))
+    yield put(actions.api_v1_homepage_readSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_homepage_readFailed(err, action))
+    yield put(actions.api_v1_homepage_readFailed(err))
   }
 }
 function* api_v1_homepage_readWatcher() {
@@ -302,9 +302,9 @@ function* api_v1_homepage_readWatcher() {
 function* api_v1_homepage_updateWorker(action) {
   try {
     const result = yield call(apiService.api_v1_homepage_update, action)
-    yield put(actions.api_v1_homepage_updateSucceeded(result, action))
+    yield put(actions.api_v1_homepage_updateSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_homepage_updateFailed(err, action))
+    yield put(actions.api_v1_homepage_updateFailed(err))
   }
 }
 function* api_v1_homepage_updateWatcher() {
@@ -313,9 +313,9 @@ function* api_v1_homepage_updateWatcher() {
 function* api_v1_homepage_partial_updateWorker(action) {
   try {
     const result = yield call(apiService.api_v1_homepage_partial_update, action)
-    yield put(actions.api_v1_homepage_partial_updateSucceeded(result, action))
+    yield put(actions.api_v1_homepage_partial_updateSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_homepage_partial_updateFailed(err, action))
+    yield put(actions.api_v1_homepage_partial_updateFailed(err))
   }
 }
 function* api_v1_homepage_partial_updateWatcher() {
@@ -327,9 +327,9 @@ function* api_v1_homepage_partial_updateWatcher() {
 function* api_v1_login_createWorker(action) {
   try {
     const result = yield call(apiService.api_v1_login_create, action)
-    yield put(actions.api_v1_login_createSucceeded(result, action))
+    yield put(actions.api_v1_login_createSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_login_createFailed(err, action))
+    yield put(actions.api_v1_login_createFailed(err))
   }
 }
 function* api_v1_login_createWatcher() {
@@ -338,9 +338,9 @@ function* api_v1_login_createWatcher() {
 function* api_v1_signup_createWorker(action) {
   try {
     const result = yield call(apiService.api_v1_signup_create, action)
-    yield put(actions.api_v1_signup_createSucceeded(result, action))
+    yield put(actions.api_v1_signup_createSucceeded(result))
   } catch (err) {
-    yield put(actions.api_v1_signup_createFailed(err, action))
+    yield put(actions.api_v1_signup_createFailed(err))
   }
 }
 function* api_v1_signup_createWatcher() {
@@ -349,9 +349,9 @@ function* api_v1_signup_createWatcher() {
 function* rest_auth_login_createWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_login_create, action)
-    yield put(actions.rest_auth_login_createSucceeded(result, action))
+    yield put(actions.rest_auth_login_createSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_login_createFailed(err, action))
+    yield put(actions.rest_auth_login_createFailed(err))
   }
 }
 function* rest_auth_login_createWatcher() {
@@ -360,9 +360,9 @@ function* rest_auth_login_createWatcher() {
 function* rest_auth_logout_listWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_logout_list, action)
-    yield put(actions.rest_auth_logout_listSucceeded(result, action))
+    yield put(actions.rest_auth_logout_listSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_logout_listFailed(err, action))
+    yield put(actions.rest_auth_logout_listFailed(err))
   }
 }
 function* rest_auth_logout_listWatcher() {
@@ -371,9 +371,9 @@ function* rest_auth_logout_listWatcher() {
 function* rest_auth_logout_createWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_logout_create, action)
-    yield put(actions.rest_auth_logout_createSucceeded(result, action))
+    yield put(actions.rest_auth_logout_createSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_logout_createFailed(err, action))
+    yield put(actions.rest_auth_logout_createFailed(err))
   }
 }
 function* rest_auth_logout_createWatcher() {
@@ -385,9 +385,9 @@ function* rest_auth_password_change_createWorker(action) {
       apiService.rest_auth_password_change_create,
       action
     )
-    yield put(actions.rest_auth_password_change_createSucceeded(result, action))
+    yield put(actions.rest_auth_password_change_createSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_password_change_createFailed(err, action))
+    yield put(actions.rest_auth_password_change_createFailed(err))
   }
 }
 function* rest_auth_password_change_createWatcher() {
@@ -402,9 +402,9 @@ function* rest_auth_password_reset_createWorker(action) {
       apiService.rest_auth_password_reset_create,
       action
     )
-    yield put(actions.rest_auth_password_reset_createSucceeded(result, action))
+    yield put(actions.rest_auth_password_reset_createSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_password_reset_createFailed(err, action))
+    yield put(actions.rest_auth_password_reset_createFailed(err))
   }
 }
 function* rest_auth_password_reset_createWatcher() {
@@ -419,13 +419,9 @@ function* rest_auth_password_reset_confirm_createWorker(action) {
       apiService.rest_auth_password_reset_confirm_create,
       action
     )
-    yield put(
-      actions.rest_auth_password_reset_confirm_createSucceeded(result, action)
-    )
+    yield put(actions.rest_auth_password_reset_confirm_createSucceeded(result))
   } catch (err) {
-    yield put(
-      actions.rest_auth_password_reset_confirm_createFailed(err, action)
-    )
+    yield put(actions.rest_auth_password_reset_confirm_createFailed(err))
   }
 }
 function* rest_auth_password_reset_confirm_createWatcher() {
@@ -437,9 +433,9 @@ function* rest_auth_password_reset_confirm_createWatcher() {
 function* rest_auth_registration_createWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_registration_create, action)
-    yield put(actions.rest_auth_registration_createSucceeded(result, action))
+    yield put(actions.rest_auth_registration_createSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_registration_createFailed(err, action))
+    yield put(actions.rest_auth_registration_createFailed(err))
   }
 }
 function* rest_auth_registration_createWatcher() {
@@ -455,15 +451,10 @@ function* rest_auth_registration_verify_email_createWorker(action) {
       action
     )
     yield put(
-      actions.rest_auth_registration_verify_email_createSucceeded(
-        result,
-        action
-      )
+      actions.rest_auth_registration_verify_email_createSucceeded(result)
     )
   } catch (err) {
-    yield put(
-      actions.rest_auth_registration_verify_email_createFailed(err, action)
-    )
+    yield put(actions.rest_auth_registration_verify_email_createFailed(err))
   }
 }
 function* rest_auth_registration_verify_email_createWatcher() {
@@ -475,9 +466,9 @@ function* rest_auth_registration_verify_email_createWatcher() {
 function* rest_auth_user_readWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_user_read, action)
-    yield put(actions.rest_auth_user_readSucceeded(result, action))
+    yield put(actions.rest_auth_user_readSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_user_readFailed(err, action))
+    yield put(actions.rest_auth_user_readFailed(err))
   }
 }
 function* rest_auth_user_readWatcher() {
@@ -486,9 +477,9 @@ function* rest_auth_user_readWatcher() {
 function* rest_auth_user_updateWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_user_update, action)
-    yield put(actions.rest_auth_user_updateSucceeded(result, action))
+    yield put(actions.rest_auth_user_updateSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_user_updateFailed(err, action))
+    yield put(actions.rest_auth_user_updateFailed(err))
   }
 }
 function* rest_auth_user_updateWatcher() {
@@ -497,9 +488,9 @@ function* rest_auth_user_updateWatcher() {
 function* rest_auth_user_partial_updateWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_user_partial_update, action)
-    yield put(actions.rest_auth_user_partial_updateSucceeded(result, action))
+    yield put(actions.rest_auth_user_partial_updateSucceeded(result))
   } catch (err) {
-    yield put(actions.rest_auth_user_partial_updateFailed(err, action))
+    yield put(actions.rest_auth_user_partial_updateFailed(err))
   }
 }
 function* rest_auth_user_partial_updateWatcher() {
