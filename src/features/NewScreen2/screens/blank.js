@@ -29,7 +29,7 @@ export class _New extends React.Component {
 New = withStyles(_New, theme => ({}))
 
 function mapStateToProps(state) {
-  return { state: state.apiReducer }
+  return { state: state }
 }
 const actionCreators = {}
 export default connect(mapStateToProps, actionCreators)(New)
