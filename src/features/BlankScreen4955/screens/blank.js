@@ -1,6 +1,16 @@
-import React, { Component } from "react"
+import React from "react"
 import { View } from "react-native"
-import { Text, Layout, Button } from "react-native-ui-kitten"
+import {
+  withStyles,
+  Text,
+  Button,
+  CheckBox,
+  Radio,
+  Toggle,
+  Icon,
+  Input
+} from "react-native-ui-kitten"
+
 import { connect } from "react-redux"
 import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin"
 import { styles } from "./styles"
@@ -15,9 +25,15 @@ export class _Blank extends React.Component {
   state = {}
 
   render = () => (
-    <CbFlex title="Button12345" color="#FF8040" style={styles.CbFlex_undefined}>
-      <CbFlex style={styles.CbFlex_undefined} />
-    </CbFlex>
+    <View style={styles.View_1}>
+      <Button
+        title="something"
+        style={styles.Button_4}
+        onPress={() => alert("Pressed!")}
+      >
+        Buttonok
+      </Button>
+    </View>
   )
 }
 
