@@ -30,7 +30,6 @@ class _New extends Component {
   )
 }
 
-const styles = StyleSheet.create({})
 function mapStateToProps(state) {
   return { state: state.apiReducer }
 }
