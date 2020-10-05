@@ -9,7 +9,6 @@ import {
 } from "react-native"
 import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 import { connect } from "react-redux"
-import { Text, Layout, Button } from "react-native-ui-kitten"
 import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin"
 import { styles } from "./styles"
 import * as calendarActions from "../../redux/actions"
