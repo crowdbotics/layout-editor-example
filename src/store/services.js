@@ -21,10 +21,10 @@ const testePermissionsAPI = axios.create({
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function updatePet(action) {
-  return swaggerPetstore.put(`/pet`, { data: action.data })
+  return swaggerPetstore.put(`/pet`, action.data)
 }
 function addPet(action) {
-  return swaggerPetstore.post(`/pet`, { data: action.data })
+  return swaggerPetstore.post(`/pet`, action.data)
 }
 function findPetsByStatus(action) {
   return swaggerPetstore.get(`/pet/findByStatus`, {
@@ -40,21 +40,19 @@ function getPetById(action) {
   return swaggerPetstore.get(`/pet/${action.petId}`)
 }
 function updatePetWithForm(action) {
-  return swaggerPetstore.post(`/pet/${action.petId}`, { data: action.data })
+  return swaggerPetstore.post(`/pet/${action.petId}`, action.data)
 }
 function deletePet(action) {
   return swaggerPetstore.delete(`/pet/${action.petId}`)
 }
 function uploadFile(action) {
-  return swaggerPetstore.post(`/pet/${action.petId}/uploadImage`, {
-    data: action.data
-  })
+  return swaggerPetstore.post(`/pet/${action.petId}/uploadImage`, action.data)
 }
 function getInventory(action) {
   return swaggerPetstore.get(`/store/inventory`)
 }
 function placeOrder(action) {
-  return swaggerPetstore.post(`/store/order`, { data: action.data })
+  return swaggerPetstore.post(`/store/order`, action.data)
 }
 function getOrderById(action) {
   return swaggerPetstore.get(`/store/order/${action.orderId}`)
@@ -63,13 +61,13 @@ function deleteOrder(action) {
   return swaggerPetstore.delete(`/store/order/${action.orderId}`)
 }
 function createUser(action) {
-  return swaggerPetstore.post(`/user`, { data: action.data })
+  return swaggerPetstore.post(`/user`, action.data)
 }
 function createUsersWithArrayInput(action) {
-  return swaggerPetstore.post(`/user/createWithArray`, { data: action.data })
+  return swaggerPetstore.post(`/user/createWithArray`, action.data)
 }
 function createUsersWithListInput(action) {
-  return swaggerPetstore.post(`/user/createWithList`, { data: action.data })
+  return swaggerPetstore.post(`/user/createWithList`, action.data)
 }
 function loginUser(action) {
   return swaggerPetstore.get(`/user/login`, {
@@ -83,7 +81,7 @@ function getUserByName(action) {
   return swaggerPetstore.get(`/user/${action.username}`)
 }
 function updateUser(action) {
-  return swaggerPetstore.put(`/user/${action.username}`, { data: action.data })
+  return swaggerPetstore.put(`/user/${action.username}`, action.data)
 }
 function deleteUser(action) {
   return swaggerPetstore.delete(`/user/${action.username}`)
@@ -95,14 +93,16 @@ function api_v1_customtext_read(action) {
   return testePermissionsAPI.get(`/api/v1/customtext/${action.id}/`)
 }
 function api_v1_customtext_update(action) {
-  return testePermissionsAPI.put(`/api/v1/customtext/${action.id}/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.put(
+    `/api/v1/customtext/${action.id}/`,
+    action.data
+  )
 }
 function api_v1_customtext_partial_update(action) {
-  return testePermissionsAPI.patch(`/api/v1/customtext/${action.id}/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.patch(
+    `/api/v1/customtext/${action.id}/`,
+    action.data
+  )
 }
 function api_v1_homepage_list(action) {
   return testePermissionsAPI.get(`/api/v1/homepage/`)
@@ -111,23 +111,22 @@ function api_v1_homepage_read(action) {
   return testePermissionsAPI.get(`/api/v1/homepage/${action.id}/`)
 }
 function api_v1_homepage_update(action) {
-  return testePermissionsAPI.put(`/api/v1/homepage/${action.id}/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.put(`/api/v1/homepage/${action.id}/`, action.data)
 }
 function api_v1_homepage_partial_update(action) {
-  return testePermissionsAPI.patch(`/api/v1/homepage/${action.id}/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.patch(
+    `/api/v1/homepage/${action.id}/`,
+    action.data
+  )
 }
 function api_v1_login_create(action) {
   return testePermissionsAPI.post(`/api/v1/login/`)
 }
 function api_v1_signup_create(action) {
-  return testePermissionsAPI.post(`/api/v1/signup/`, { data: action.data })
+  return testePermissionsAPI.post(`/api/v1/signup/`, action.data)
 }
 function rest_auth_login_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/login/`, { data: action.data })
+  return testePermissionsAPI.post(`/rest-auth/login/`, action.data)
 }
 function rest_auth_logout_list(action) {
   return testePermissionsAPI.get(`/rest-auth/logout/`)
@@ -136,38 +135,34 @@ function rest_auth_logout_create(action) {
   return testePermissionsAPI.post(`/rest-auth/logout/`)
 }
 function rest_auth_password_change_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/password/change/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.post(`/rest-auth/password/change/`, action.data)
 }
 function rest_auth_password_reset_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/password/reset/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.post(`/rest-auth/password/reset/`, action.data)
 }
 function rest_auth_password_reset_confirm_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/password/reset/confirm/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.post(
+    `/rest-auth/password/reset/confirm/`,
+    action.data
+  )
 }
 function rest_auth_registration_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/registration/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.post(`/rest-auth/registration/`, action.data)
 }
 function rest_auth_registration_verify_email_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/registration/verify-email/`, {
-    data: action.data
-  })
+  return testePermissionsAPI.post(
+    `/rest-auth/registration/verify-email/`,
+    action.data
+  )
 }
 function rest_auth_user_read(action) {
   return testePermissionsAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(action) {
-  return testePermissionsAPI.put(`/rest-auth/user/`, { data: action.data })
+  return testePermissionsAPI.put(`/rest-auth/user/`, action.data)
 }
 function rest_auth_user_partial_update(action) {
-  return testePermissionsAPI.patch(`/rest-auth/user/`, { data: action.data })
+  return testePermissionsAPI.patch(`/rest-auth/user/`, action.data)
 }
 export const apiService = {
   updatePet,
