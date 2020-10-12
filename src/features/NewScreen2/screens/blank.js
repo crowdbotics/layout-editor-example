@@ -1,16 +1,28 @@
 import React, { Component } from "react"
-import { View, Image, ImageBackground } from "react-native"
-import { Text, Layout, Button } from "react-native-ui-kitten"
-
+import {
+  View,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+  Text,
+  Button,
+  Switch,
+  TextInput,
+  StyleSheet
+} from "react-native"
+import DateTimePicker from "react-native-datepicker"
+import Icon from "react-native-vector-icons/FontAwesome"
 import Slider from "@react-native-community/slider"
+import { CheckBox } from "react-native-elements"
 import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 import { connect } from "react-redux"
+import { Text, Layout, Button } from "react-native-ui-kitten"
 import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin"
 import { styles } from "./styles"
 import * as calendarActions from "../../redux/actions"
 import ErrorBox from "../../../../components/ErrorBox"
 
-export class _New extends React.Component {
+export class New extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
@@ -22,9 +34,9 @@ export class _New extends React.Component {
   )
 }
 
-New = withStyles(_New, theme => ({
-  container: { backgroundColor: theme["color-basic-100"] }
-}))
+const styles = StyleSheet.create({
+  container: { flex: 1, marginHorizontal: 16 }
+})
 
 function mapStateToProps(state) {
   return { state: state.apiReducer }
