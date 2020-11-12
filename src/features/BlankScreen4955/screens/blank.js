@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import {
   View,
   Image,
@@ -22,15 +22,9 @@ export class _Blank extends React.Component {
   }
   state = {}
   render = () => (
-    <View style={styles.View_1}>
-      <Button
-        title="something"
-        style={styles.Button_4}
-        onPress={() => alert("Pressed!")}
-      >
-        Buttonok
-      </Button>
-    </View>
+    <CbFlex title="Button12345" color="#FF8040" style={styles.CbFlex_undefined}>
+      <CbFlex style={styles.CbFlex_undefined} />
+    </CbFlex>
   )
 }
 
@@ -1330,6 +1324,7 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     backgroundSize: "auto"
   },
+
   Button_4: { overflow: "visible", borderStyle: "solid" }
 })
 
