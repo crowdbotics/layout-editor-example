@@ -17,10 +17,14 @@ import { CheckBox } from "react-native-elements"
 import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 import { connect } from "react-redux"
 export class New extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+    this.state = {}
+  }
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
-  state = {}
   render = () => (
     <CbFlex title="Button12345" color="#FF8040" style={styles.CbFlex_undefined}>
       <CbFlex style={styles.CbFlex_undefined} />
