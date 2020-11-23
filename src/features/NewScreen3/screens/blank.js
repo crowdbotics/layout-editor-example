@@ -19,6 +19,7 @@ import { connect } from "react-redux"
 export class New extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {}
     this.state = {}
   }
