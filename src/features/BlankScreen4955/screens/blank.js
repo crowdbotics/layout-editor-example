@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import {
   View,
   Image,
@@ -17,20 +17,17 @@ import { CheckBox } from "react-native-elements"
 import { SlideMenuIcon } from "../../../navigator/slideMenuIcon"
 import { connect } from "react-redux"
 export class _Blank extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
-  state = {}
   render = () => (
-    <View style={styles.View_1}>
-      <Button
-        title="something"
-        style={styles.Button_4}
-        onPress={() => alert("Pressed!")}
-      >
-        Buttonok
-      </Button>
-    </View>
+    <CbFlex title="Button12345" color="#FF8040" style={styles.CbFlex_undefined}>
+      <CbFlex style={styles.CbFlex_undefined} />
+    </CbFlex>
   )
 }
 
@@ -105,6 +102,7 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     backgroundSize: "auto"
   },
+
   Button_4: { overflow: "visible", borderStyle: "solid" }
 })
 
