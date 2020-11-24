@@ -45,7 +45,9 @@ function updatePetWithForm(action) {
   })
 }
 function deletePet(action) {
-  return swaggerPetstore.delete(`/pet/${action.petId}`)
+  return swaggerPetstore.delete(`/pet/${action.petId}`, null, {
+    headers: { api_key: action.api_key }
+  })
 }
 function uploadFile(action) {
   return swaggerPetstore.post(`/pet/${action.petId}/uploadImage`, null, {
