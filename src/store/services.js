@@ -46,7 +46,7 @@ function updatePetWithForm(action) {
 }
 function deletePet(action) {
   return swaggerPetstore.delete(`/pet/${action.petId}`, null, {
-    headers: { api_key: action.api_key }
+    headers: { api_key: action["api_key"] }
   })
 }
 function uploadFile(action) {
