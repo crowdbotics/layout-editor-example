@@ -103,10 +103,14 @@ function api_v1_customtext_read(action) {
   return testePermissionsAPI.get(`/api/v1/customtext/${action.id}/`)
 }
 function api_v1_customtext_update(action) {
-  return testePermissionsAPI.put(`/api/v1/customtext/${action.id}/`)
+  return testePermissionsAPI.put(`/api/v1/customtext/${action.id}/`, null, {
+    data: action.data
+  })
 }
 function api_v1_customtext_partial_update(action) {
-  return testePermissionsAPI.patch(`/api/v1/customtext/${action.id}/`)
+  return testePermissionsAPI.patch(`/api/v1/customtext/${action.id}/`, null, {
+    data: action.data
+  })
 }
 function api_v1_homepage_list(action) {
   return testePermissionsAPI.get(`/api/v1/homepage/`)
@@ -115,19 +119,27 @@ function api_v1_homepage_read(action) {
   return testePermissionsAPI.get(`/api/v1/homepage/${action.id}/`)
 }
 function api_v1_homepage_update(action) {
-  return testePermissionsAPI.put(`/api/v1/homepage/${action.id}/`)
+  return testePermissionsAPI.put(`/api/v1/homepage/${action.id}/`, null, {
+    data: action.data
+  })
 }
 function api_v1_homepage_partial_update(action) {
-  return testePermissionsAPI.patch(`/api/v1/homepage/${action.id}/`)
+  return testePermissionsAPI.patch(`/api/v1/homepage/${action.id}/`, null, {
+    data: action.data
+  })
 }
 function api_v1_login_create(action) {
   return testePermissionsAPI.post(`/api/v1/login/`)
 }
 function api_v1_signup_create(action) {
-  return testePermissionsAPI.post(`/api/v1/signup/`)
+  return testePermissionsAPI.post(`/api/v1/signup/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_login_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/login/`)
+  return testePermissionsAPI.post(`/rest-auth/login/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_logout_list(action) {
   return testePermissionsAPI.get(`/rest-auth/logout/`)
@@ -136,28 +148,44 @@ function rest_auth_logout_create(action) {
   return testePermissionsAPI.post(`/rest-auth/logout/`)
 }
 function rest_auth_password_change_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/password/change/`)
+  return testePermissionsAPI.post(`/rest-auth/password/change/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_password_reset_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/password/reset/`)
+  return testePermissionsAPI.post(`/rest-auth/password/reset/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_password_reset_confirm_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/password/reset/confirm/`)
+  return testePermissionsAPI.post(`/rest-auth/password/reset/confirm/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_registration_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/registration/`)
+  return testePermissionsAPI.post(`/rest-auth/registration/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_registration_verify_email_create(action) {
-  return testePermissionsAPI.post(`/rest-auth/registration/verify-email/`)
+  return testePermissionsAPI.post(
+    `/rest-auth/registration/verify-email/`,
+    null,
+    { data: action.data }
+  )
 }
 function rest_auth_user_read(action) {
   return testePermissionsAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(action) {
-  return testePermissionsAPI.put(`/rest-auth/user/`)
+  return testePermissionsAPI.put(`/rest-auth/user/`, null, {
+    data: action.data
+  })
 }
 function rest_auth_user_partial_update(action) {
-  return testePermissionsAPI.patch(`/rest-auth/user/`)
+  return testePermissionsAPI.patch(`/rest-auth/user/`, null, {
+    data: action.data
+  })
 }
 export const apiService = {
   updatePet,

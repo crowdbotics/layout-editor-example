@@ -173,12 +173,7 @@ export default function apiReducer(state = initialState, action) {
     case types.API_V1_CUSTOMTEXT_LIST:
     case types.API_V1_CUSTOMTEXT_LIST_SUCCEEDED:
       return Object.assign({}, state, {
-        customTexts: [
-          ...state.customTexts.filter(
-            record => record.id !== action.response.id
-          ),
-          action.response
-        ]
+        customTexts: [...state.customTexts, action.response]
       })
     case types.API_V1_CUSTOMTEXT_LIST_FAILED:
       return Object.assign({}, state, {
@@ -223,10 +218,7 @@ export default function apiReducer(state = initialState, action) {
     case types.API_V1_HOMEPAGE_LIST:
     case types.API_V1_HOMEPAGE_LIST_SUCCEEDED:
       return Object.assign({}, state, {
-        homePages: [
-          ...state.homePages.filter(record => record.id !== action.response.id),
-          action.response
-        ]
+        homePages: [...state.homePages, action.response]
       })
     case types.API_V1_HOMEPAGE_LIST_FAILED:
       return Object.assign({}, state, {
