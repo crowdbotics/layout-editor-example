@@ -27,9 +27,9 @@ export class New extends React.Component {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
   render = () => (
-    <CbFlex title="Button12345" color="#FF8000" style={styles.CbFlex_undefined}>
-      <CbFlex style={styles.CbFlex_undefined} />
-    </CbFlex>
+    <View title="Button12345" color="#FF8000" style={styles.View_undefined}>
+      <View style={styles.View_undefined} />
+    </View>
   )
 }
 
