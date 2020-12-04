@@ -32,20 +32,7 @@ export class _Blank extends React.Component {
   )
 }
 
-const styles = StyleSheet.create({
-  View_1: {
-    overflow: "visible",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderStyle: "solid",
-    backgroundSize: "auto"
-  },
-
-  Button_4: { overflow: "visible", borderStyle: "solid" }
-})
+const styles = StyleSheet.create({})
 
 function mapStateToProps(state) {
   return { state: state.apiReducer }
