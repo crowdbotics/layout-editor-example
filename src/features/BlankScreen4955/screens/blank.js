@@ -26,9 +26,9 @@ export class _Blank extends React.Component {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
   render = () => (
-    <View title="Button12345" color="#FF8000" style={styles.View_undefined}>
-      <View style={styles.View_undefined} />
-    </View>
+    <CbFlex title="Button12345" color="#FF8040" style={styles.CbFlex_undefined}>
+      <CbFlex style={styles.CbFlex_undefined} />
+    </CbFlex>
   )
 }
 
@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
 })
 
 function mapStateToProps(state) {
-  return { state: state.apiReducer }
+  return {}
 }
+
 const actionCreators = {}
 export default connect(mapStateToProps, actionCreators)(_Blank)
