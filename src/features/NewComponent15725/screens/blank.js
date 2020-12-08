@@ -20,7 +20,7 @@ export class Blank extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { CheckBox_4: this.props.pets.is_stray }
+    this.state = { CheckBox_4: this.props.petsCheckBox4.is_stray }
   }
   static navigationOptions = ({ navigation }) => {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
@@ -28,9 +28,9 @@ export class Blank extends React.Component {
   render = () => (
     <View title="Button12345" color="#FF8040" style={styles.View_1}>
       <View style={styles.View_2} />
-      <Text>{this.props.users.firstName}</Text>
+      <Text>{this.props.usersText3.firstName}</Text>
       <CheckBox
-        title={this.props.pets.stray_info}
+        title={this.props.petsCheckBox4.stray_info}
         checked={this.state.CheckBox_4}
         onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
       />
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => {
   return {
-    usersCbText3: state.apiReducer.users
-      .filter(usersCbText3 => usersCbText3.firstName == "John")
+    usersText3: state.apiReducer.users
+      .filter(usersText3 => usersText3.firstName == "John")
       .sort((a, b) => {
         var valueA = a.firstName.toUpperCase()
         var valueB = b.firstName.toUpperCase()
@@ -60,8 +60,8 @@ const mapStateToProps = state => {
           return 0
         }
       }),
-    petsCbCheckbox4: state.apiReducer.pets.filter(
-      petsCbCheckbox4 => petsCbCheckbox4.is_stray == true
+    petsCheckBox4: state.apiReducer.pets.filter(
+      petsCheckBox4 => petsCheckBox4.is_stray == true
     )
   }
 }
