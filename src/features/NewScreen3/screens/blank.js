@@ -36,59 +36,7 @@ export class New extends React.Component {
 const styles = StyleSheet.create({})
 
 function mapStateToProps(state) {
-  return {
-    petsundefinedundefined: state.apiReducer.pets
-      .filter(
-        petsundefinedundefined => petsundefinedundefined.name == "Lorem Ipsum"
-      )
-      .filter(
-        petsundefinedundefined => petsundefinedundefined.name != "Lorem Ipsum"
-      )
-      .filter(petsundefinedundefined => petsundefinedundefined.age > 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age <= 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age >= 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age < 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age < 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age >= 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age <= 25)
-      .filter(petsundefinedundefined => petsundefinedundefined.age > 25)
-      .filter(petsundefinedundefined => !petsundefinedundefined.name)
-      .filter(petsundefinedundefined => !petsundefinedundefined.age)
-      .filter(petsundefinedundefined => {
-        if (petsundefinedundefined.name)
-          return petsundefinedundefined.name.toString().includes("lorem")
-      })
-      .filter(petsundefinedundefined => {
-        if (petsundefinedundefined.age)
-          return petsundefinedundefined.age.toString().includes(25)
-      })
-      .filter(petsundefinedundefined => petsundefinedundefined.name)
-      .filter(petsundefinedundefined => petsundefinedundefined.age)
-      .filter(petsundefinedundefined => {
-        if (petsundefinedundefined.name)
-          return !petsundefinedundefined.name.toString().includes("lorem")
-      })
-      .filter(petsundefinedundefined => {
-        if (petsundefinedundefined.age)
-          return !petsundefinedundefined.age.toString().includes(25)
-      })
-      .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
-      .sort((a, b) => new Number(a.value) - new Number(b.value))
-      .sort((a, b) => {
-        var valueA = a.name.toUpperCase()
-        var valueB = b.name.toUpperCase()
-        if (valueA < valueB) {
-          return -1
-        } else if (valueA > valueB) {
-          return 1
-        } else {
-          return 0
-        }
-      })
-      .reverse()
-      .sort((a, b) => new Boolean(a.public) - new Boolean(b.public))
-      .reverse()
-  }
+  return {}
 }
 
 const actionCreators = {}
