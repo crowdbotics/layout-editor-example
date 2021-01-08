@@ -8,7 +8,7 @@ import {
   Button,
   Switch,
   TextInput,
-  StyleSheet,
+  StyleSheet
 } from "react-native"
 import DateTimePicker from "react-native-datepicker"
 import Icon from "react-native-vector-icons/FontAwesome"
