@@ -36,6 +36,7 @@ export const findPetsByTags = (tags) => ({
   type: types.FIND_PETS_BY_TAGS,
   tags,
 })
+
 export const findPetsByTagsSucceeded = (response) => ({
   type: types.FIND_PETS_BY_TAGS_SUCCEEDED,
   response,
