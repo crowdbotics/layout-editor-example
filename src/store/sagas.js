@@ -553,10 +553,10 @@ export default function* rootSaga() {
     rest_auth_registration_verify_email_createWatcher,
     rest_auth_user_readWatcher,
     rest_auth_user_updateWatcher,
-    rest_auth_user_partial_updateWatcher,
+    rest_auth_user_partial_updateWatcher
   ]
   yield all(
-    sagas.map((saga) =>
+    sagas.map(saga =>
       spawn(function* () {
         while (true) {
           try {
