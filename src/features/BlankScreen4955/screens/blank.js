@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import {
   View,
   Image,
@@ -8,7 +8,7 @@ import {
   Button,
   Switch,
   TextInput,
-  StyleSheet
+  StyleSheet,
 } from "react-native"
 import DateTimePicker from "react-native-datepicker"
 import Icon from "react-native-vector-icons/FontAwesome"
@@ -26,31 +26,13 @@ export class _Blank extends React.Component {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
   render = () => (
-    <View style={styles.View_1}>
-      <Button
-        title="something"
-        style={styles.Button_4}
-        onPress={() => alert("Pressed!")}
-      >
-        Buttonok
-      </Button>
+    <View title="Button12345" color="#FF8000" style={styles.View_undefined}>
+      <View style={styles.View_undefined} />
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-  View_1: {
-    overflow: "visible",
-    flexDirection: "column",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignItems: "stretch",
-    alignContent: "stretch",
-    borderStyle: "solid",
-    backgroundSize: "auto"
-  },
-  Button_4: { overflow: "visible", borderStyle: "solid" }
-})
+const styles = StyleSheet.create({})
 
 function mapStateToProps(state) {
   return {}
