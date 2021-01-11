@@ -8,7 +8,7 @@ import {
   Button,
   Switch,
   TextInput,
-  StyleSheet,
+  StyleSheet
 } from "react-native"
 import DateTimePicker from "react-native-datepicker"
 import Icon from "react-native-vector-icons/FontAwesome"
@@ -32,7 +32,7 @@ export class Blank extends React.Component {
       <CheckBox
         title={this.props.petsCheckBox4.stray_info}
         checked={this.state.CheckBox_4}
-        onPress={(nextChecked) => this.setState({ CheckBox_4: nextChecked })}
+        onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
       />
     </View>
   )
@@ -42,13 +42,13 @@ const styles = StyleSheet.create({
   View_1: { overflow: "visible" },
   View_2: { overflow: "visible" },
   Text_3: {},
-  CheckBox_4: {},
+  CheckBox_4: {}
 })
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     usersText3: state.apiReducer.users
-      .filter((usersText3) => usersText3.firstName == "John")
+      .filter(usersText3 => usersText3.firstName == "John")
       .sort((a, b) => {
         var valueA = a.firstName.toUpperCase()
         var valueB = b.firstName.toUpperCase()
@@ -61,8 +61,8 @@ const mapStateToProps = (state) => {
         }
       }),
     petsCheckBox4: state.apiReducer.pets.filter(
-      (petsCheckBox4) => petsCheckBox4.is_stray == true
-    ),
+      petsCheckBox4 => petsCheckBox4.is_stray == true
+    )
   }
 }
 
