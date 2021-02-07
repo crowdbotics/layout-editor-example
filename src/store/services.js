@@ -13,7 +13,7 @@ const swaggerPetstore = axios.create({
   }
 })
 const testePermissionsAPI = axios.create({
-  baseURL: "https://testepermissions_15043.herokuapp.com",
+  baseURL: "https://testepermissions_15043.herokuapp.com/",
   auth: {
     username: TESTEPERMISSIONS_API_USERNAME,
     password: TESTEPERMISSIONS_API_PASSWORD
