@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   Text_10417_1135: {
     color: "rgba(0, 24, 72, 1)",
     fontSize: 26,
-    fontFamily: "Roboto-Regular-Regular",
+    fontFamily: "Roboto-Regular-Regular-Regular",
     textAlign: "left",
     letterSpacing: 0,
     textTransform: "none"
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   Text_10417_1138: {
     color: "rgba(255, 255, 255, 1)",
     fontSize: 13,
-    fontFamily: "Roboto-Regular-Regular",
+    fontFamily: "Roboto-Regular-Regular-Regular",
     textAlign: "center",
     letterSpacing: 0,
     textTransform: "none"
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   Text_10417_1141: {
     color: "rgba(255, 255, 255, 1)",
     fontSize: 13,
-    fontFamily: "Roboto-Regular-Regular",
+    fontFamily: "Roboto-Regular-Regular-Regular",
     textAlign: "center",
     letterSpacing: 0,
     textTransform: "none"
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
   Text_10417_1144: {
     color: "rgba(255, 255, 255, 1)",
     fontSize: 13,
-    fontFamily: "Roboto-Regular-Regular",
+    fontFamily: "Roboto-Regular-Regular-Regular",
     textAlign: "center",
     letterSpacing: 0,
     textTransform: "none"
