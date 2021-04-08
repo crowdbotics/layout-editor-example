@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const placeOrder = createAsyncThunk(
   "orders/placeOrder",
   async payload => await apiService.placeOrder(payload)
@@ -63,7 +63,7 @@ const ordersSlice = createSlice({
     [deleteOrder.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
         state.entities = state.entities.filter(
-          record => record.id !== action.starter.id
+          record => record.id !== action.meta.arg?.id
         )
         state.api.loading = "idle"
       }

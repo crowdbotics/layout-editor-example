@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const api_v1_signup_create = createAsyncThunk(
   "signups/api_v1_signup_create",
   async payload => await apiService.api_v1_signup_create(payload)

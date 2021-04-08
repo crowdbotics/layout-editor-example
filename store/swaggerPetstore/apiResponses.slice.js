@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const uploadFile = createAsyncThunk(
   "apiResponses/uploadFile",
   async payload => await apiService.uploadFile(payload)

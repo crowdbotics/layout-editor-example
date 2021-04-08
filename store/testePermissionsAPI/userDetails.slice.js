@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const rest_auth_user_read = createAsyncThunk(
   "userDetails/rest_auth_user_read",
   async payload => await apiService.rest_auth_user_read(payload)

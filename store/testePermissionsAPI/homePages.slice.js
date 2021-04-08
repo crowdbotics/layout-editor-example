@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const api_v1_homepage_list = createAsyncThunk(
   "homePages/api_v1_homepage_list",
   async payload => await apiService.api_v1_homepage_list(payload)
@@ -29,7 +29,7 @@ const homePagesSlice = createSlice({
     },
     [api_v1_homepage_list.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
-        state.entities = [...state.entities, ...action.payload]
+        state.entities = action.payload
         state.api.loading = "idle"
       }
     },

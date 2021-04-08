@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const findPetsByStatus = createAsyncThunk(
   "pets/findPetsByStatus",
   async payload => await apiService.findPetsByStatus(payload)
@@ -33,7 +33,7 @@ const petsSlice = createSlice({
     },
     [findPetsByStatus.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
-        state.entities = [...state.entities, ...action.payload]
+        state.entities = action.payload
         state.api.loading = "idle"
       }
     },
@@ -50,7 +50,7 @@ const petsSlice = createSlice({
     },
     [findPetsByTags.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
-        state.entities = [...state.entities, ...action.payload]
+        state.entities = action.payload
         state.api.loading = "idle"
       }
     },
@@ -105,7 +105,7 @@ const petsSlice = createSlice({
     [deletePet.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
         state.entities = state.entities.filter(
-          record => record.id !== action.starter.id
+          record => record.id !== action.meta.arg?.id
         )
         state.api.loading = "idle"
       }

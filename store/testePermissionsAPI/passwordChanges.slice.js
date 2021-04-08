@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-import { apiService } from "./services"
+import { apiService } from "./api"
 export const rest_auth_password_change_create = createAsyncThunk(
   "passwordChanges/rest_auth_password_change_create",
   async payload => await apiService.rest_auth_password_change_create(payload)
