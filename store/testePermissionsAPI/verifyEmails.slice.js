@@ -3,9 +3,8 @@ import { apiService } from "./api"
 export const rest_auth_registration_verify_email_create = createAsyncThunk(
   "verifyEmails/rest_auth_registration_verify_email_create",
   async payload => {
-    const response = await apiService.rest_auth_registration_verify_email_create(
-      payload
-    )
+    const response =
+      await apiService.rest_auth_registration_verify_email_create(payload)
     return response.data
   }
 )
