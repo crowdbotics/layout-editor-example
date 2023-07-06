@@ -9,10 +9,10 @@ const swaggerPetstore = axios.create({
   }
 })
 function updatePet(payload) {
-  return swaggerPetstore.put(`/pet`, payload.data)
+  return swaggerPetstore.put(`/pet`, payload)
 }
 function addPet(payload) {
-  return swaggerPetstore.post(`/pet`, payload.data)
+  return swaggerPetstore.post(`/pet`, payload)
 }
 function findPetsByStatus(payload) {
   return swaggerPetstore.get(`/pet/findByStatus`, {
@@ -28,19 +28,19 @@ function getPetById(payload) {
   return swaggerPetstore.get(`/pet/${payload.petId}`)
 }
 function updatePetWithForm(payload) {
-  return swaggerPetstore.post(`/pet/${payload.petId}`, payload.data)
+  return swaggerPetstore.post(`/pet/${payload.petId}`, payload)
 }
 function deletePet(payload) {
   return swaggerPetstore.delete(`/pet/${payload.petId}`)
 }
 function uploadFile(payload) {
-  return swaggerPetstore.post(`/pet/${payload.petId}/uploadImage`, payload.data)
+  return swaggerPetstore.post(`/pet/${payload.petId}/uploadImage`, payload)
 }
 function getInventory(payload) {
   return swaggerPetstore.get(`/store/inventory`)
 }
 function placeOrder(payload) {
-  return swaggerPetstore.post(`/store/order`, payload.data)
+  return swaggerPetstore.post(`/store/order`, payload)
 }
 function getOrderById(payload) {
   return swaggerPetstore.get(`/store/order/${payload.orderId}`)
@@ -49,13 +49,13 @@ function deleteOrder(payload) {
   return swaggerPetstore.delete(`/store/order/${payload.orderId}`)
 }
 function createUser(payload) {
-  return swaggerPetstore.post(`/user`, payload.data)
+  return swaggerPetstore.post(`/user`, payload)
 }
 function createUsersWithArrayInput(payload) {
-  return swaggerPetstore.post(`/user/createWithArray`, payload.data)
+  return swaggerPetstore.post(`/user/createWithArray`, payload)
 }
 function createUsersWithListInput(payload) {
-  return swaggerPetstore.post(`/user/createWithList`, payload.data)
+  return swaggerPetstore.post(`/user/createWithList`, payload)
 }
 function loginUser(payload) {
   return swaggerPetstore.get(`/user/login`, {
@@ -69,7 +69,7 @@ function getUserByName(payload) {
   return swaggerPetstore.get(`/user/${payload.username}`)
 }
 function updateUser(payload) {
-  return swaggerPetstore.put(`/user/${payload.username}`, payload.data)
+  return swaggerPetstore.put(`/user/${payload.username}`, payload)
 }
 function deleteUser(payload) {
   return swaggerPetstore.delete(`/user/${payload.username}`)

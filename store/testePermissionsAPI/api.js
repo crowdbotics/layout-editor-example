@@ -18,16 +18,10 @@ function api_v1_customtext_read(payload) {
   return testePermissionsAPI.get(`/api/v1/customtext/${payload.id}/`)
 }
 function api_v1_customtext_update(payload) {
-  return testePermissionsAPI.put(
-    `/api/v1/customtext/${payload.id}/`,
-    payload.data
-  )
+  return testePermissionsAPI.put(`/api/v1/customtext/${payload.id}/`, payload)
 }
 function api_v1_customtext_partial_update(payload) {
-  return testePermissionsAPI.patch(
-    `/api/v1/customtext/${payload.id}/`,
-    payload.data
-  )
+  return testePermissionsAPI.patch(`/api/v1/customtext/${payload.id}/`, payload)
 }
 function api_v1_homepage_list(payload) {
   return testePermissionsAPI.get(`/api/v1/homepage/`)
@@ -36,25 +30,19 @@ function api_v1_homepage_read(payload) {
   return testePermissionsAPI.get(`/api/v1/homepage/${payload.id}/`)
 }
 function api_v1_homepage_update(payload) {
-  return testePermissionsAPI.put(
-    `/api/v1/homepage/${payload.id}/`,
-    payload.data
-  )
+  return testePermissionsAPI.put(`/api/v1/homepage/${payload.id}/`, payload)
 }
 function api_v1_homepage_partial_update(payload) {
-  return testePermissionsAPI.patch(
-    `/api/v1/homepage/${payload.id}/`,
-    payload.data
-  )
+  return testePermissionsAPI.patch(`/api/v1/homepage/${payload.id}/`, payload)
 }
 function api_v1_login_create(payload) {
   return testePermissionsAPI.post(`/api/v1/login/`)
 }
 function api_v1_signup_create(payload) {
-  return testePermissionsAPI.post(`/api/v1/signup/`, payload.data)
+  return testePermissionsAPI.post(`/api/v1/signup/`, payload)
 }
 function rest_auth_login_create(payload) {
-  return testePermissionsAPI.post(`/rest-auth/login/`, payload.data)
+  return testePermissionsAPI.post(`/rest-auth/login/`, payload)
 }
 function rest_auth_logout_list(payload) {
   return testePermissionsAPI.get(`/rest-auth/logout/`)
@@ -63,34 +51,31 @@ function rest_auth_logout_create(payload) {
   return testePermissionsAPI.post(`/rest-auth/logout/`)
 }
 function rest_auth_password_change_create(payload) {
-  return testePermissionsAPI.post(`/rest-auth/password/change/`, payload.data)
+  return testePermissionsAPI.post(`/rest-auth/password/change/`, payload)
 }
 function rest_auth_password_reset_create(payload) {
-  return testePermissionsAPI.post(`/rest-auth/password/reset/`, payload.data)
+  return testePermissionsAPI.post(`/rest-auth/password/reset/`, payload)
 }
 function rest_auth_password_reset_confirm_create(payload) {
-  return testePermissionsAPI.post(
-    `/rest-auth/password/reset/confirm/`,
-    payload.data
-  )
+  return testePermissionsAPI.post(`/rest-auth/password/reset/confirm/`, payload)
 }
 function rest_auth_registration_create(payload) {
-  return testePermissionsAPI.post(`/rest-auth/registration/`, payload.data)
+  return testePermissionsAPI.post(`/rest-auth/registration/`, payload)
 }
 function rest_auth_registration_verify_email_create(payload) {
   return testePermissionsAPI.post(
     `/rest-auth/registration/verify-email/`,
-    payload.data
+    payload
   )
 }
 function rest_auth_user_read(payload) {
   return testePermissionsAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(payload) {
-  return testePermissionsAPI.put(`/rest-auth/user/`, payload.data)
+  return testePermissionsAPI.put(`/rest-auth/user/`, payload)
 }
 function rest_auth_user_partial_update(payload) {
-  return testePermissionsAPI.patch(`/rest-auth/user/`, payload.data)
+  return testePermissionsAPI.patch(`/rest-auth/user/`, payload)
 }
 export const apiService = {
   api_v1_customtext_list,
