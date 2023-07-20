@@ -12,25 +12,24 @@ const apiResponsesSlice = createSlice({
   name: "apiResponses",
   initialState,
   reducers: {},
-  extraReducers: builder => {
-    builder
-      .addCase(uploadFile.pending, (state, action) => {
-        if (state.api.loading === "idle") {
-          state.api.loading = "pending"
-        }
-      })
-      .addCase(uploadFile.fulfilled, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.entities.push(action.payload)
-          state.api.loading = "idle"
-        }
-      })
-      .addCase(uploadFile.rejected, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.api.error = action.error
-          state.api.loading = "idle"
-        }
-      })
+  extraReducers: {
+    [uploadFile.pending]: (state, action) => {
+      if (state.api.loading === "idle") {
+        state.api.loading = "pending"
+      }
+    },
+    [uploadFile.fulfilled]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.entities.push(action.payload)
+        state.api.loading = "idle"
+      }
+    },
+    [uploadFile.rejected]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.api.error = action.error
+        state.api.loading = "idle"
+      }
+    }
   }
 })
 export default { uploadFile, slice: apiResponsesSlice }

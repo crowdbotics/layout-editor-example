@@ -26,64 +26,63 @@ const ordersSlice = createSlice({
   name: "orders",
   initialState,
   reducers: {},
-  extraReducers: builder => {
-    builder
-      .addCase(placeOrder.pending, (state, action) => {
-        if (state.api.loading === "idle") {
-          state.api.loading = "pending"
-        }
-      })
-      .addCase(placeOrder.fulfilled, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.entities.push(action.payload)
-          state.api.loading = "idle"
-        }
-      })
-      .addCase(placeOrder.rejected, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.api.error = action.error
-          state.api.loading = "idle"
-        }
-      })
-      .addCase(getOrderById.pending, (state, action) => {
-        if (state.api.loading === "idle") {
-          state.api.loading = "pending"
-        }
-      })
-      .addCase(getOrderById.fulfilled, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.entities = [
-            ...state.entities.filter(record => record.id !== action.payload.id),
-            action.payload
-          ]
-          state.api.loading = "idle"
-        }
-      })
-      .addCase(getOrderById.rejected, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.api.error = action.error
-          state.api.loading = "idle"
-        }
-      })
-      .addCase(deleteOrder.pending, (state, action) => {
-        if (state.api.loading === "idle") {
-          state.api.loading = "pending"
-        }
-      })
-      .addCase(deleteOrder.fulfilled, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.entities = state.entities.filter(
-            record => record.id !== action.meta.arg?.id
-          )
-          state.api.loading = "idle"
-        }
-      })
-      .addCase(deleteOrder.rejected, (state, action) => {
-        if (state.api.loading === "pending") {
-          state.api.error = action.error
-          state.api.loading = "idle"
-        }
-      })
+  extraReducers: {
+    [placeOrder.pending]: (state, action) => {
+      if (state.api.loading === "idle") {
+        state.api.loading = "pending"
+      }
+    },
+    [placeOrder.fulfilled]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.entities.push(action.payload)
+        state.api.loading = "idle"
+      }
+    },
+    [placeOrder.rejected]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.api.error = action.error
+        state.api.loading = "idle"
+      }
+    },
+    [getOrderById.pending]: (state, action) => {
+      if (state.api.loading === "idle") {
+        state.api.loading = "pending"
+      }
+    },
+    [getOrderById.fulfilled]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.entities = [
+          ...state.entities.filter(record => record.id !== action.payload.id),
+          action.payload
+        ]
+        state.api.loading = "idle"
+      }
+    },
+    [getOrderById.rejected]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.api.error = action.error
+        state.api.loading = "idle"
+      }
+    },
+    [deleteOrder.pending]: (state, action) => {
+      if (state.api.loading === "idle") {
+        state.api.loading = "pending"
+      }
+    },
+    [deleteOrder.fulfilled]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.entities = state.entities.filter(
+          record => record.id !== action.meta.arg?.id
+        )
+        state.api.loading = "idle"
+      }
+    },
+    [deleteOrder.rejected]: (state, action) => {
+      if (state.api.loading === "pending") {
+        state.api.error = action.error
+        state.api.loading = "idle"
+      }
+    }
   }
 })
 export default { placeOrder, getOrderById, deleteOrder, slice: ordersSlice }
